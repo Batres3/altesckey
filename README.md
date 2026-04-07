@@ -11,5 +11,5 @@ For Example, Sometimes I like to play left handed and want an Esc key variant on
 keyboard for quick access.
 
 As a precaution, the mod falls back to default behavior if the user completely unbinds the
-Escape key, and Escape functions as normal. Otherwise the user could get stuck in the game
+Escape key, and then the Escape key will function as normal. Otherwise the user could get stuck in the game
 with no easy way to pause or exit the game.
