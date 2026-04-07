@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "altesckey",
+	"version": "${version}",
+	"name": "Alternate Escape Key",
+	"description": "Map an alternate key to the Escape key.",
+	"authors": [
+		"Arthur Blake"
+	],
+	"contact": {
+		"homepage": "https://github.com/arthurblake/altesckey",
+		"sources": "https://github.com/arthurblake/altesckey"
+	},
+	"license": "MIT",
+	"icon": "assets/altesckey/AESC_transparent.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.blakesys.mc.altesckey.AltEscKey"
+		],
+		"client": [
+			"com.blakesys.mc.altesckey.client.AltEscKeyClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "altesckey.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": ">=26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
