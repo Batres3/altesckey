@@ -1,10 +1,10 @@
 package com.blakesys.mc.altesckey.client.mixin;
 
 import net.minecraft.client.input.InputWithModifiers;
-import org.lwjgl.glfw.GLFW;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import com.mojang.blaze3d.platform.InputConstants;
 
 import static com.blakesys.mc.altesckey.client.AltEscKeyClient.ESC_KEYBIND;
 import static com.blakesys.mc.altesckey.client.AltEscKeyClient.ALT_ESC_KEYBIND;
@@ -38,6 +38,6 @@ public interface AltEscKeyMixin {
 
 		// we might add an option later in case this is actually what the user
 		// wants. although I'm not sure why they would want this...
-		return i == GLFW.GLFW_KEY_ESCAPE;
+		return i == InputConstants.KEY_ESCAPE;
 	}
 }

@@ -6,7 +6,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 
 public class AltEscKeyClient implements ClientModInitializer {
     public static CodeKeyMapping ESC_KEYBIND;
@@ -21,10 +20,10 @@ public class AltEscKeyClient implements ClientModInitializer {
     public void onInitializeClient() {
         // This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
-        ALT_ESC_KEYBIND =                 new CodeKeyMapping(
+        ALT_ESC_KEYBIND = new CodeKeyMapping(
                 "key.altesckey.altesc",     // Translation key for the name (shown in controls menu)
-                InputConstants.Type.KEYSYM,       // KEYSYM = keyboard, MOUSE = mouse button
-                GLFW.GLFW_KEY_UNKNOWN,            // Default keycode is unbound (aka unknown)
+                InputConstants.Type.KEYBOARD,       // KEYSYM = keyboard, MOUSE = mouse button
+                InputConstants.UNKNOWN.getValue(),            // Default keycode is unbound (aka unknown)
                 CATEGORY                  // Category (group in controls menu)
         );
 
@@ -35,8 +34,8 @@ public class AltEscKeyClient implements ClientModInitializer {
 
         ESC_KEYBIND = new CodeKeyMapping(
                 "key.altesckey.esc",     // Translation key for the name (shown in controls menu)
-                InputConstants.Type.KEYSYM,       // KEYSYM = keyboard, MOUSE = mouse button
-                GLFW.GLFW_KEY_ESCAPE,            // Default keycode is unbound (aka unknown)
+                InputConstants.Type.KEYBOARD,       // KEYSYM = keyboard, MOUSE = mouse button
+                InputConstants.KEY_ESCAPE,            // Default keycode is unbound (aka unknown)
                 CATEGORY                  // Category (group in controls menu)
         );
         KeyMappingHelper.registerKeyMapping(ESC_KEYBIND);
